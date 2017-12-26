@@ -1,0 +1,19 @@
+{{> header }}
+
+
+	<div class="container">
+		<h1 class="text-center">{{ msg.title }}</h1>
+		{{#if msg.greet }}
+			<h3 class="text-center">{{ msg.greet }}</h3>
+		{{/if}}
+		{{#if msg.user_id }}
+			<h4 class="text-center">{{ msg.user_id }}</h4>
+		{{/if}}
+		<div class="well">
+			<h3><a href="/login">Login</a></h3>
+			<h3><a href="/Register">Register</a></h3>
+		</div>
+	</div>
+
+
+{{> footer }}

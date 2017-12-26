@@ -1,0 +1,39 @@
+{{> header }}
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-3 col-md-6">
+				<h1 class="{{ msg.className }}">{{ msg.title }}</h1>
+				{{#if msg.errors }}
+					{{#each msg.errors }}
+						<div class="alert alert-danger">
+							{{this.msg}}
+						</div>
+					{{/each}}
+				{{/if}}
+				<form action="/add/user" method="POST" role="form">
+					<div class="form-group">
+						<label for="uid">Username:</label>
+						<input class="form-control" type="text" placeholder="Username..." id="uid" name="user_username">
+					</div>
+					<div class="form-group">
+						<label for="email">Email:</label>
+						<input class="form-control" type="text" placeholder="email..." id="email" name="user_email">
+					</div>
+					<div class="form-group">
+						<label for="pwd">Password:</label>
+						<input class="form-control" type="password" placeholder="Password..." id="pwd" name="user_password">
+					</div>
+					<div class="form-group">
+						<label for="confirm_pwd">Re-Enter Password:</label>
+						<input class="form-control" type="password" placeholder="Confirm password..." id="confirm_pwd" name="user_confirm_password" id="confirm_pwd">
+					</div>
+						<input type="submit" class="btn btn-primary btn-block" name="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+{{> footer }}
